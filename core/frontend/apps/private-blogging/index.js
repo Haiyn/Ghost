@@ -31,7 +31,7 @@ let checkSubdir = function checkSubdir() {
 module.exports = {
     activate: function activate(ghost) {
         let privateRoute = `/${PRIVATE_KEYWORD}/`;
-        console.log("Test");
+        console.log("Test 2");
 
         checkSubdir();
 
