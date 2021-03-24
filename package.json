@@ -32,7 +32,8 @@
     "lint:test": "eslint -c test/.eslintrc.json --ignore-path test/.eslintignore 'test/**/*.js'",
     "lint": "yarn lint:server && yarn lint:shared && yarn lint:frontend && yarn lint:test",
     "posttest": "yarn lint",
-    "fixmodulenotdefined": "yarn cache clean && cd core/client && rm -rf node_modules tmp dist && yarn && cd ../../"
+    "fixmodulenotdefined": "yarn cache clean && cd core/client && rm -rf node_modules tmp dist && yarn && cd ../../",
+    "test-pa11y": "./node_modules/.bin/pa11y-ci"
   },
   "engines": {
     "node": "^10.13.0 || ^12.10.0 || ^14.15.0",
@@ -144,6 +145,7 @@
     "sqlite3": "4.2.0"
   },
   "devDependencies": {
+    "pa11y-ci": "~1.0",
     "@lodder/grunt-postcss": "3.0.0",
     "coffeescript": "2.5.1",
     "cssnano": "4.1.10",
